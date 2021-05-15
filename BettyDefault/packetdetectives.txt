@@ -1,0 +1,13 @@
+Created by Betty DuBois of Packet Detectives
+
+betty@bettydubois.com
+https://wiresharkprofiles.com
+
+Goal of profile:
+This is my starter profile.  I have turned off most protocols for speed, and add the baseline of columns.
+I copy this one to make all my other ones.
+
+If you have suggestions for this, or any other of my profiles, please let me know.
+
+If you have a profile you would like to share, let me know that too.
+I'd love to add it to https://wiresharkprofiles.com and credit you as the contributor.
