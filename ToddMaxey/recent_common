@@ -1,0 +1,247 @@
+# Common recent settings file for Wireshark 3.4.4.
+#
+# This file is regenerated each time Wireshark is quit
+# and when changing configuration profile.
+# So be careful, if you want to make manual changes here.
+
+######## Recent capture files (latest last), cannot be altered through command line ########
+
+recent.capture_file: C:\Users\toddmax\Downloads\packetcapture (49).cap
+recent.capture_file: C:\Users\toddmax\OneDrive - Microsoft\Desktop\Unable to connect with RDP.pcapng
+recent.capture_file: C:\Users\toddmax\Downloads\pa-vf-ccm01.pcapng
+recent.capture_file: C:\Users\toddmax\Downloads\packetcapture (50).cap
+recent.capture_file: C:\Users\toddmax\Downloads\WAP1adfs.cap
+recent.capture_file: C:\Users\toddmax\Downloads\NPS2.cap
+recent.capture_file: C:\Users\toddmax\Downloads\packetcapture (29).cap
+recent.capture_file: C:\Users\toddmax\Downloads\WiresharkLogs\04062021\MosAttemptLoginPattsy_MostRecent.pcapng
+recent.capture_file: C:\Users\toddmax\Downloads\P01WUT034 Saturday-April-17-2021-10.58.32\P01WUT034 Saturday-April-17-2021-10.58.32.pcapng
+recent.capture_file: C:\Users\toddmax\Downloads\P01WUT034 Saturday-April-17-2021-11.18.56.pcapng
+
+######## Recent capture filters (latest last), cannot be altered through command line ########
+
+
+######## Recent display filters (latest last), cannot be altered through command line ########
+
+recent.display_filter: ip.ttl < 64 or ip.ttl > 128
+recent.display_filter: udp.port == 389 or dns.qry.type == 33
+recent.display_filter: tcp.port == 443
+recent.display_filter: kerberos or ntlmssp or radius or ldap.authentication or udp.port == 1812 or udp.port == 1813 or udp.port == 1645 or udp.port == 1646 or tcp.port ==88  or udp.port == 88 or imap.request.username or mapi.EcDoConnect.name or kerberos.CNameString or tls.handshake.extensions_server_name == "autologon.microsoftazuread-sso.com" or tls.handshake.extensions_server_name == "adnotifications.windowsazure.com" or tls.handshake.extensions_server_name == "logon.microsoftonline.com"
+recent.display_filter: tcp.stream eq 43
+recent.display_filter: tcp.stream eq 52
+recent.display_filter: tls.handshake.type >= 1 
+recent.display_filter: dns or tcp.port == 53 or udp.port == 53
+recent.display_filter: ip.addr == 10.121.216.94
+recent.display_filter: tcp.stream eq 8
+
+######## Recent remote hosts, cannot be altered through command line ########
+
+
+# Main window geometry.
+# Decimal numbers.
+gui.geometry_main_x: -1
+gui.geometry_main_y: -2166
+gui.geometry_main_width: 1920
+gui.geometry_main_height: 1063
+
+# Main window maximized.
+# TRUE or FALSE (case-insensitive).
+gui.geometry_main_maximized: TRUE
+
+# Leftalign Action Buttons.
+# TRUE or FALSE (case-insensitive).
+gui.geometry_leftalign_actions: FALSE
+
+# Statusbar left pane size.
+# Decimal number.
+gui.geometry_status_pane: 250
+
+# Statusbar middle pane size.
+# Decimal number.
+gui.geometry_status_pane_right: 250
+
+# Last used Configuration Profile.
+gui.last_used_profile: Default
+
+# WLAN statistics upper pane size.
+# Decimal number.
+gui.geometry_status_wlan_stats_pane: 200
+
+# Warn if running with elevated permissions (e.g. as root).
+# TRUE or FALSE (case-insensitive).
+privs.warn_if_elevated: TRUE
+
+# Warn if Wireshark is unable to capture.
+# TRUE or FALSE (case-insensitive).
+sys.warn_if_no_capture: TRUE
+
+# Find packet search in.
+# One of: PACKET_LIST, PACKET_DETAILS, PACKET_BYTES
+gui.search_in: PACKET_DETAILS
+
+# Find packet character set.
+# One of: NARROW_AND_WIDE, NARROW, WIDE
+gui.search_char_set: NARROW_AND_WIDE
+
+# Find packet case sensitive search.
+# TRUE or FALSE (case-insensitive).
+gui.search_case_sensitive: FALSE
+
+# Find packet search type.
+# One of: DISPLAY_FILTER, HEX_VALUE, STRING, REGEX
+gui.search_type: STRING
+
+# Geometry and maximized state of EnabledProtocolsDialog window.
+# Decimal integers.
+gui.geom.EnabledProtocolsDialog.x: 142
+gui.geom.EnabledProtocolsDialog.y: 13
+gui.geom.EnabledProtocolsDialog.width: 987
+gui.geom.EnabledProtocolsDialog.height: 595
+# TRUE or FALSE (case-insensitive).
+gui.geom.EnabledProtocolsDialog.maximized: FALSE
+
+# Geometry and maximized state of ExpertInfoDialog window.
+# Decimal integers.
+gui.geom.ExpertInfoDialog.x: 285
+gui.geom.ExpertInfoDialog.y: 30
+gui.geom.ExpertInfoDialog.width: 702
+gui.geom.ExpertInfoDialog.height: 768
+# TRUE or FALSE (case-insensitive).
+gui.geom.ExpertInfoDialog.maximized: FALSE
+
+# Geometry and maximized state of FollowStreamDialog window.
+# Decimal integers.
+gui.geom.FollowStreamDialog.x: 380
+gui.geom.FollowStreamDialog.y: 85
+gui.geom.FollowStreamDialog.width: 1163
+gui.geom.FollowStreamDialog.height: 939
+# TRUE or FALSE (case-insensitive).
+gui.geom.FollowStreamDialog.maximized: FALSE
+
+# Geometry and maximized state of CaptureFilePropertiesDialog window.
+# Decimal integers.
+gui.geom.CaptureFilePropertiesDialog.x: 533
+gui.geom.CaptureFilePropertiesDialog.y: -1964
+gui.geom.CaptureFilePropertiesDialog.width: 853
+gui.geom.CaptureFilePropertiesDialog.height: 709
+# TRUE or FALSE (case-insensitive).
+gui.geom.CaptureFilePropertiesDialog.maximized: FALSE
+
+# Geometry and maximized state of ColoringRulesDialog window.
+# Decimal integers.
+gui.geom.ColoringRulesDialog.x: 3250
+gui.geom.ColoringRulesDialog.y: -2965
+gui.geom.ColoringRulesDialog.width: 1280
+gui.geom.ColoringRulesDialog.height: 846
+# TRUE or FALSE (case-insensitive).
+gui.geom.ColoringRulesDialog.maximized: FALSE
+
+# Geometry and maximized state of Display Filter Macros window.
+# Decimal integers.
+gui.geom.Display Filter Macros.x: 352
+gui.geom.Display Filter Macros.y: 109
+gui.geom.Display Filter Macros.width: 566
+gui.geom.Display Filter Macros.height: 403
+# TRUE or FALSE (case-insensitive).
+gui.geom.Display Filter Macros.maximized: FALSE
+
+# Geometry and maximized state of PacketDialog window.
+# Decimal integers.
+gui.geom.PacketDialog.x: 192
+gui.geom.PacketDialog.y: -2045
+gui.geom.PacketDialog.width: 1536
+gui.geom.PacketDialog.height: 850
+# TRUE or FALSE (case-insensitive).
+gui.geom.PacketDialog.maximized: FALSE
+
+# Geometry and maximized state of PreferencesDialog window.
+# Decimal integers.
+gui.geom.PreferencesDialog.x: 239
+gui.geom.PreferencesDialog.y: 34
+gui.geom.PreferencesDialog.width: 1653
+gui.geom.PreferencesDialog.height: 847
+# TRUE or FALSE (case-insensitive).
+gui.geom.PreferencesDialog.maximized: FALSE
+
+# Geometry and maximized state of ResolvedAddressesDialog window.
+# Decimal integers.
+gui.geom.ResolvedAddressesDialog.x: 313
+gui.geom.ResolvedAddressesDialog.y: -2160
+gui.geom.ResolvedAddressesDialog.width: 1280
+gui.geom.ResolvedAddressesDialog.height: 1055
+# TRUE or FALSE (case-insensitive).
+gui.geom.ResolvedAddressesDialog.maximized: FALSE
+
+# Geometry and maximized state of DecodeAsDialog window.
+# Decimal integers.
+gui.geom.DecodeAsDialog.x: 584
+gui.geom.DecodeAsDialog.y: -1873
+gui.geom.DecodeAsDialog.width: 750
+gui.geom.DecodeAsDialog.height: 460
+# TRUE or FALSE (case-insensitive).
+gui.geom.DecodeAsDialog.maximized: FALSE
+
+# Geometry and maximized state of ip_hosts window.
+# Decimal integers.
+gui.geom.ip_hosts.x: 553
+gui.geom.ip_hosts.y: 262
+gui.geom.ip_hosts.width: 800
+gui.geom.ip_hosts.height: 459
+# TRUE or FALSE (case-insensitive).
+gui.geom.ip_hosts.maximized: FALSE
+
+# Geometry and maximized state of PacketCommentDialog window.
+# Decimal integers.
+gui.geom.PacketCommentDialog.x: 752
+gui.geom.PacketCommentDialog.y: -1794
+gui.geom.PacketCommentDialog.width: 400
+gui.geom.PacketCommentDialog.height: 300
+# TRUE or FALSE (case-insensitive).
+gui.geom.PacketCommentDialog.maximized: FALSE
+
+# Geometry and maximized state of DNS Servers window.
+# Decimal integers.
+gui.geom.DNS Servers.x: 676
+gui.geom.DNS Servers.y: -1845
+gui.geom.DNS Servers.width: 566
+gui.geom.DNS Servers.height: 403
+# TRUE or FALSE (case-insensitive).
+gui.geom.DNS Servers.maximized: FALSE
+
+# Geometry and maximized state of DisplayFilterExpressionDialog window.
+# Decimal integers.
+gui.geom.DisplayFilterExpressionDialog.x: 249
+gui.geom.DisplayFilterExpressionDialog.y: 124
+gui.geom.DisplayFilterExpressionDialog.width: 1281
+gui.geom.DisplayFilterExpressionDialog.height: 1021
+# TRUE or FALSE (case-insensitive).
+gui.geom.DisplayFilterExpressionDialog.maximized: FALSE
+
+# Geometry and maximized state of ProfileDialog window.
+# Decimal integers.
+gui.geom.ProfileDialog.x: 724
+gui.geom.ProfileDialog.y: -1802
+gui.geom.ProfileDialog.width: 470
+gui.geom.ProfileDialog.height: 300
+# TRUE or FALSE (case-insensitive).
+gui.geom.ProfileDialog.maximized: FALSE
+
+# Geometry and maximized state of IOGraphDialog window.
+# Decimal integers.
+gui.geom.IOGraphDialog.x: 216
+gui.geom.IOGraphDialog.y: 51
+gui.geom.IOGraphDialog.width: 850
+gui.geom.IOGraphDialog.height: 640
+# TRUE or FALSE (case-insensitive).
+gui.geom.IOGraphDialog.maximized: FALSE
+
+# Custom colors.
+# List of custom colors selected in Qt color picker.
+gui.custom_colors: 
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff",
+	"ffffffff", "ffffffff"
