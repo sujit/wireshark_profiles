@@ -17,6 +17,7 @@ Below are the set of profiles that can be used to aid to protocol analysis using
 | Prorile               |   URL                                 |
 | :--------             |   :-------------------------          |
 | ToddMaxey             |   `https://github.com/ToddMaxey/WireShark_Configuration` |
+|                       |   `https://github.com/ToddMaxey/WireShark_Configuration/blob/main/toddmax_personal_wireshark_configuration.zip` |
 | LauraChappel          |   `https://github.com/farrokhi/wireshark-profile` |
 | amwalding             |   `https://github.com/amwalding/wireshark_profiles` |
 | BettyDefault          |   `https://wiresharkprofiles.com/my-default-profile/` |
