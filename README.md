@@ -1,4 +1,4 @@
-### What are profiles
+### Wireshark profiles
 
 A great way to get the most out of Wireshark is to create Configuration Profiles.  These profiles allow you to save configuration settings and filters based on protocol or application.  By customizing the columns, colorization rules, and filters for a protocol, you can quickly get down to those packets that are part of the problem.
 
