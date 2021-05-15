@@ -8,4 +8,3 @@ Below are the set of profiles that can be used to aid to protocol analysis using
 
 
 **NOTE:** *I am not a huge fan of Packet diagrams, thus I've turned them off in my custom settings on top of these profiles. You can consider these set of profiles I've shared are done on top of these above author's default provided profiles.*
-
