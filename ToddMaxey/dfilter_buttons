@@ -11,3 +11,4 @@
 "TRUE","Remove RDP","!(tcp.port == 3389) and !(udp.port == 3389) ",""
 "TRUE","TCP Flags","tcp.flags == 0x2 or\x0atcp.flags == 0xc2 or\x0atcp.flags == 0x12 or\x0atcp.flags == 0x52 or\x0atcp.flags == 0x14 or\x0atcp.flags == 0x4","TCP Flags"
 "TRUE","TLS Alerts","(tls.record.content_type == 21) && (tls.record.length < 26)","TLS Alerts -- remember a tls.record.length = 26 just a normal termination"
+"TRUE","TLSOverview","((tcp.nxtseq < 2 and tcp.ack < 2) or tls.handshake or tls.alert_message or (tcp.flags&5))",""

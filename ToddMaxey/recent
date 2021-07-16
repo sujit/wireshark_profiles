@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 3.4.5.
+# Recent settings file for Wireshark 3.4.7.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -43,7 +43,7 @@ gui.packet_list_colorize: TRUE
 
 # Timestamp display format.
 # One of: RELATIVE, ABSOLUTE, ABSOLUTE_WITH_YMD, ABSOLUTE_WITH_YDOY, ABSOLUTE_WITH_DATE, DELTA, DELTA_DIS, EPOCH, UTC, UTC_WITH_YMD, UTC_WITH_YDOY, UTC_WITH_DATE
-gui.time_format: RELATIVE
+gui.time_format: UTC
 
 # Timestamp display precision.
 # One of: AUTO, SEC, DSEC, CSEC, MSEC, USEC, NSEC
@@ -71,32 +71,38 @@ gui.packet_diagram_field_values: FALSE
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 452
+gui.geometry_main_upper_pane: 625
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 957
+gui.geometry_main_lower_pane: 943
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
-        %m, 61,
-        %Tt, 81,
-        "%Cus:tcp.analysis.bytes_in_flight", 51,
-        "%Cus:tcp.analysis.ack_rtt", 79,
-        %t, 66,
-        %s, 191,
-        %d, 191,
-        "%Cus:tcp.srcport or udp.srcport", 97,
-        "%Cus:tcp.dstport or udp.dstport", 97,
-        "%Cus:kerberos or ntlmssp or radius or ldap.authentication or imap.request.username or mapi.EcDoConnect.name", 112,
-        "%Cus:tls.handshake.certificates or pkcs12 or x509af or x509ce or x509if or x509sat", 41,
-        "%Cus:ldap.assertionValue or radius.User_Name or ntlmssp.auth.username or imap.request.username or mapi.EcDoConnect.name or kerberos.CNameString", 229,
-        "%Cus:tls.handshake.extensions_server_name", 217,
-        %L, 41,
-        %p, 54,
-        "%Cus:ip.ttl or ipv6.hlim", 29,
-        %i, 318
+        "%Cus:frame.number", 72:L,
+        "%Cus:tcp.stream || udp.stream", 52:C,
+        %Tt, 71:C,
+        "%Cus:tcp.analysis.ack_rtt", 86:C,
+        %t, 114:C,
+        %s, 114:C,
+        %d, 114:C,
+        "%Cus:tcp.srcport or udp.srcport", 42:C,
+        "%Cus:tcp.dstport or udp.dstport", 42:C,
+        "%Cus:kerberos or ntlmssp or radius or ldap.authentication or imap.request.username or mapi.EcDoConnect.name", 35:C,
+        "%Cus:tls.handshake.certificates or pkcs12 or x509af or x509ce or x509if or x509sat", 0,
+        "%Cus:ldap.assertionValue or radius.User_Name or ntlmssp.auth.username or imap.request.username or mapi.EcDoConnect.name or kerberos.CNameString", 60:C,
+        "%Cus:tcp.analysis.bytes_in_flight", 50:C,
+        "%Cus:tls.handshake.extensions_server_name", 136:C,
+        %L, 0:C,
+        %p, 57,
+        "%Cus:ip.ttl or ipv6.hlim", 0,
+        "%Cus:ldap.messageID", 70,
+        "%Cus:dcom.vt.bstr", 0,
+        "%Cus:dcerpc.cn_bind_to_uuid", 0,
+        "%Cus:tls.record.length", 0,
+        "%Cus:tcp.len", 50:C,
+        %i, 1156
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
@@ -111,7 +117,7 @@ gui.endpoint_tabs:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: C:\Users\thesu\Google Drive\Shared\BloodHound_4.0.2_PCAPs\LocalVM_BloodHound_WinSrv2016Std_Python\PCAPs_WIthoutBadBlood\
+gui.fileopen_remembered_dir: C:\Users\thesu\Downloads\
 
 # Additional Toolbars shown
 # List of additional toolbars to show.

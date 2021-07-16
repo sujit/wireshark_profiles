@@ -1,4 +1,4 @@
-# Configuration file for Wireshark 3.4.5.
+# Configuration file for Wireshark 3.4.7.
 #
 # This file is regenerated each time preferences are saved within
 # Wireshark. Making manual changes should be safe, however.
@@ -216,14 +216,14 @@
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: 
+gui.column.hidden: %Cus:tls.handshake.certificates or pkcs12 or x509af or x509ce or x509if or x509sat:0:R,%L,%Cus:ip.ttl or ipv6.hlim:0:R,%Cus:dcom.vt.bstr:0:R,%Cus:dcerpc.cn_bind_to_uuid:0:R,%Cus:tls.record.length:0:R
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
 gui.column.format: 
-	"#", "%m",
+	"Frame", "%Cus:frame.number:0:R",
+	"StIndex", "%Cus:tcp.stream || udp.stream:0:R",
 	"⌚Δ", "%Tt",
-	"ByIF", "%Cus:tcp.analysis.bytes_in_flight:0:R",
 	"RTT", "%Cus:tcp.analysis.ack_rtt:0:R",
 	"⌚", "%t",
 	"Source", "%s",
@@ -232,18 +232,24 @@ gui.column.format:
 	"DPort", "%Cus:tcp.dstport or udp.dstport:0:R",
 	"Auth", "%Cus:kerberos or ntlmssp or radius or ldap.authentication or imap.request.username or mapi.EcDoConnect.name:0:R",
 	"Cert", "%Cus:tls.handshake.certificates or pkcs12 or x509af or x509ce or x509if or x509sat:0:R",
-	"Auth Username", "%Cus:ldap.assertionValue or radius.User_Name or ntlmssp.auth.username or imap.request.username or mapi.EcDoConnect.name or kerberos.CNameString:0:R",
-	"TLS URL Endpoint", "%Cus:tls.handshake.extensions_server_name:0:R",
+	"AuthUser", "%Cus:ldap.assertionValue or radius.User_Name or ntlmssp.auth.username or imap.request.username or mapi.EcDoConnect.name or kerberos.CNameString:0:R",
+	"ByIF", "%Cus:tcp.analysis.bytes_in_flight:0:R",
+	"SNI", "%Cus:tls.handshake.extensions_server_name:0:R",
 	"Length", "%L",
 	"Protocol", "%p",
 	"TTL", "%Cus:ip.ttl or ipv6.hlim:0:R",
+	"messageID", "%Cus:ldap.messageID:0:R",
+	"VT_BSTR", "%Cus:dcom.vt.bstr:0:R",
+	"Interface UUID", "%Cus:dcerpc.cn_bind_to_uuid:0:R",
+	"Length", "%Cus:tls.record.length:0:R",
+	"TCPLen", "%Cus:tcp.len:0:R",
 	"Info", "%i"
 
 ####### User Interface: Font ########
 
 # Font name for packet list, protocol tree, and hex dump panes. (Qt)
 # A string
-gui.qt.font_name: OperatorMono Nerd Font,10,-1,5,50,0,0,0,0,0,Medium
+gui.qt.font_name: JetBrainsMono Nerd Font,10,-1,5,50,0,0,0,0,0
 
 ####### User Interface: Layout ########
 
@@ -298,7 +304,7 @@ capture.device: Wi-Fi (\Device\NPF_{3CE22403-4B8B-4759-A6C1-E817B67ECEAB})
 
 # Interface link-layer header types (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_linktypes: \Device\NPF_{A1CB26C8-F133-455A-9015-68E7B7189E2E}(1),\Device\NPF_{41338958-CF83-49C8-82ED-8D3221327E8B}(1),\Device\NPF_{A3E15F78-92B4-4B82-958A-868B15DC09CB}(1),\Device\NPF_{955B4EC3-549B-4BC3-A146-340F32F4FEAF}(1),\Device\NPF_{DD9C9581-080D-4A77-AB7F-F1E8ADBC51EC}(1),\Device\NPF_{BFD1A110-94C7-47FB-963D-435EF32E02D3}(1),\Device\NPF_{3A6534A0-1056-4883-BAC8-B09EB21A6E08}(1),\Device\NPF_{D5858ECF-FAC6-4D47-89BD-7629FF230A11}(1),\Device\NPF_{C866EBC0-770C-4612-92BA-1C7AFE1B9C54}(1),\Device\NPF_Loopback(0),\Device\NPF_{9B2C4762-7057-45CC-8D8D-2838293DEB9F}(1),\Device\NPF_{E9ADA9B8-9B41-4E25-A17E-7732198A35D4}(1)
+capture.devices_linktypes: \Device\NPF_{BE4C9F30-FB49-4F82-B824-353D78404F65}(1),\Device\NPF_{80AA1E36-6904-457D-98AC-BDAC5BF35FC7}(1),\Device\NPF_{D36D9EFA-52DE-4D78-AF45-4900FA5E53C6}(1),\Device\NPF_{4C044CC2-2E91-4716-94B1-4CFFD4D5A2B3}(1),\Device\NPF_{24428019-F2E3-4803-966C-FC206FCCDC73}(1),\Device\NPF_{3CE22403-4B8B-4759-A6C1-E817B67ECEAB}(1),\Device\NPF_{1742F7A3-9E22-4EB4-B977-797CC8E16497}(1),\Device\NPF_{3F58A6A4-9AF4-420E-9727-1398AA99FCD4}(1),\Device\NPF_{E0A98B59-E25F-44FF-86CF-71C533C11ADF}(1),\Device\NPF_{FF5DCC50-23EE-47A9-9410-9E652A4FCF02}(1),\Device\NPF_Loopback(0),\Device\NPF_{E4F279D7-CDB4-453F-B272-7F016DBE6BE6}(1),\Device\NPF_{0A457AC8-E7D9-4920-8C86-B7C085C2688D}(1)
 
 # Interface descriptions (Ex: eth0(eth0 descr),eth1(eth1 descr),...)
 # A string
@@ -314,19 +320,19 @@ capture.devices_linktypes: \Device\NPF_{A1CB26C8-F133-455A-9015-68E7B7189E2E}(1)
 
 # Interface buffer size (Ex: en0(1),en1(143),...)
 # A string
-capture.devices_buffersize: \Device\NPF_{A1CB26C8-F133-455A-9015-68E7B7189E2E}(2),\Device\NPF_{41338958-CF83-49C8-82ED-8D3221327E8B}(2),\Device\NPF_{A3E15F78-92B4-4B82-958A-868B15DC09CB}(2),\Device\NPF_{955B4EC3-549B-4BC3-A146-340F32F4FEAF}(2),\Device\NPF_{DD9C9581-080D-4A77-AB7F-F1E8ADBC51EC}(2),\Device\NPF_{BFD1A110-94C7-47FB-963D-435EF32E02D3}(2),\Device\NPF_{3A6534A0-1056-4883-BAC8-B09EB21A6E08}(2),\Device\NPF_{D5858ECF-FAC6-4D47-89BD-7629FF230A11}(2),\Device\NPF_{C866EBC0-770C-4612-92BA-1C7AFE1B9C54}(2),\Device\NPF_Loopback(2),\Device\NPF_{9B2C4762-7057-45CC-8D8D-2838293DEB9F}(2),\Device\NPF_{E9ADA9B8-9B41-4E25-A17E-7732198A35D4}(2)
+capture.devices_buffersize: \Device\NPF_{BE4C9F30-FB49-4F82-B824-353D78404F65}(2),\Device\NPF_{80AA1E36-6904-457D-98AC-BDAC5BF35FC7}(2),\Device\NPF_{D36D9EFA-52DE-4D78-AF45-4900FA5E53C6}(2),\Device\NPF_{4C044CC2-2E91-4716-94B1-4CFFD4D5A2B3}(2),\Device\NPF_{24428019-F2E3-4803-966C-FC206FCCDC73}(2),\Device\NPF_{3CE22403-4B8B-4759-A6C1-E817B67ECEAB}(2),\Device\NPF_{04D27E21-1416-4D49-AFF5-DC31A01103CD}(2),\Device\NPF_{1742F7A3-9E22-4EB4-B977-797CC8E16497}(2),\Device\NPF_{3F58A6A4-9AF4-420E-9727-1398AA99FCD4}(2),\Device\NPF_{E0A98B59-E25F-44FF-86CF-71C533C11ADF}(2),\Device\NPF_{FF5DCC50-23EE-47A9-9410-9E652A4FCF02}(2),\Device\NPF_Loopback(2),\Device\NPF_{E4F279D7-CDB4-453F-B272-7F016DBE6BE6}(2),\Device\NPF_{0A457AC8-E7D9-4920-8C86-B7C085C2688D}(2)
 
 # Interface snap length (Ex: en0(65535),en1(1430),...)
 # A string
-capture.devices_snaplen: \Device\NPF_{A1CB26C8-F133-455A-9015-68E7B7189E2E}:0(262144),\Device\NPF_{41338958-CF83-49C8-82ED-8D3221327E8B}:0(262144),\Device\NPF_{A3E15F78-92B4-4B82-958A-868B15DC09CB}:0(262144),\Device\NPF_{955B4EC3-549B-4BC3-A146-340F32F4FEAF}:0(262144),\Device\NPF_{DD9C9581-080D-4A77-AB7F-F1E8ADBC51EC}:0(262144),\Device\NPF_{BFD1A110-94C7-47FB-963D-435EF32E02D3}:0(262144),\Device\NPF_{3A6534A0-1056-4883-BAC8-B09EB21A6E08}:0(262144),\Device\NPF_{D5858ECF-FAC6-4D47-89BD-7629FF230A11}:0(262144),\Device\NPF_{C866EBC0-770C-4612-92BA-1C7AFE1B9C54}:0(262144),\Device\NPF_Loopback:0(262144),\Device\NPF_{9B2C4762-7057-45CC-8D8D-2838293DEB9F}:0(262144),\Device\NPF_{E9ADA9B8-9B41-4E25-A17E-7732198A35D4}:0(262144)
+capture.devices_snaplen: \Device\NPF_{BE4C9F30-FB49-4F82-B824-353D78404F65}:0(262144),\Device\NPF_{80AA1E36-6904-457D-98AC-BDAC5BF35FC7}:0(262144),\Device\NPF_{D36D9EFA-52DE-4D78-AF45-4900FA5E53C6}:0(262144),\Device\NPF_{4C044CC2-2E91-4716-94B1-4CFFD4D5A2B3}:0(262144),\Device\NPF_{24428019-F2E3-4803-966C-FC206FCCDC73}:0(262144),\Device\NPF_{3CE22403-4B8B-4759-A6C1-E817B67ECEAB}:0(262144),\Device\NPF_{04D27E21-1416-4D49-AFF5-DC31A01103CD}:0(262144),\Device\NPF_{1742F7A3-9E22-4EB4-B977-797CC8E16497}:0(262144),\Device\NPF_{3F58A6A4-9AF4-420E-9727-1398AA99FCD4}:0(262144),\Device\NPF_{E0A98B59-E25F-44FF-86CF-71C533C11ADF}:0(262144),\Device\NPF_{FF5DCC50-23EE-47A9-9410-9E652A4FCF02}:0(262144),\Device\NPF_Loopback:0(262144),\Device\NPF_{E4F279D7-CDB4-453F-B272-7F016DBE6BE6}:0(262144),\Device\NPF_{0A457AC8-E7D9-4920-8C86-B7C085C2688D}:0(262144)
 
 # Interface promiscuous mode (Ex: en0(0),en1(1),...)
 # A string
-capture.devices_pmode: \Device\NPF_{A1CB26C8-F133-455A-9015-68E7B7189E2E}(1),\Device\NPF_{41338958-CF83-49C8-82ED-8D3221327E8B}(1),\Device\NPF_{A3E15F78-92B4-4B82-958A-868B15DC09CB}(1),\Device\NPF_{955B4EC3-549B-4BC3-A146-340F32F4FEAF}(1),\Device\NPF_{DD9C9581-080D-4A77-AB7F-F1E8ADBC51EC}(1),\Device\NPF_{BFD1A110-94C7-47FB-963D-435EF32E02D3}(1),\Device\NPF_{3A6534A0-1056-4883-BAC8-B09EB21A6E08}(1),\Device\NPF_{D5858ECF-FAC6-4D47-89BD-7629FF230A11}(1),\Device\NPF_{C866EBC0-770C-4612-92BA-1C7AFE1B9C54}(1),\Device\NPF_Loopback(1),\Device\NPF_{9B2C4762-7057-45CC-8D8D-2838293DEB9F}(1),\Device\NPF_{E9ADA9B8-9B41-4E25-A17E-7732198A35D4}(1)
+capture.devices_pmode: \Device\NPF_{BE4C9F30-FB49-4F82-B824-353D78404F65}(1),\Device\NPF_{80AA1E36-6904-457D-98AC-BDAC5BF35FC7}(1),\Device\NPF_{D36D9EFA-52DE-4D78-AF45-4900FA5E53C6}(1),\Device\NPF_{4C044CC2-2E91-4716-94B1-4CFFD4D5A2B3}(1),\Device\NPF_{24428019-F2E3-4803-966C-FC206FCCDC73}(1),\Device\NPF_{3CE22403-4B8B-4759-A6C1-E817B67ECEAB}(1),\Device\NPF_{04D27E21-1416-4D49-AFF5-DC31A01103CD}(1),\Device\NPF_{1742F7A3-9E22-4EB4-B977-797CC8E16497}(1),\Device\NPF_{3F58A6A4-9AF4-420E-9727-1398AA99FCD4}(1),\Device\NPF_{E0A98B59-E25F-44FF-86CF-71C533C11ADF}(1),\Device\NPF_{FF5DCC50-23EE-47A9-9410-9E652A4FCF02}(1),\Device\NPF_Loopback(1),\Device\NPF_{E4F279D7-CDB4-453F-B272-7F016DBE6BE6}(1),\Device\NPF_{0A457AC8-E7D9-4920-8C86-B7C085C2688D}(1)
 
 # Capture in promiscuous mode?
 # TRUE or FALSE (case-insensitive)
-#capture.prom_mode: TRUE
+capture.prom_mode: FALSE
 
 # Interface capture filter (Ex: en0(tcp),en1(udp),...)
 # A string
@@ -397,7 +403,7 @@ capture.pcap_ng: FALSE
 
 # Resolve TCP/UDP ports into service names
 # TRUE or FALSE (case-insensitive)
-nameres.transport_name: TRUE
+#nameres.transport_name: FALSE
 
 # Resolve IPv4, IPv6, and IPX addresses into host names. The next set of check boxes determines how name resolution should be performed. If no other options are checked name resolution is made from Wireshark's host file and capture file name resolution blocks.
 # TRUE or FALSE (case-insensitive)
@@ -2441,7 +2447,7 @@ nameres.transport_name: TRUE
 
 # Whether to validate the IPv4 checksum
 # TRUE or FALSE (case-insensitive)
-#ip.check_checksum: FALSE
+ip.check_checksum: TRUE
 
 # Whether to correct for TSO-enabled (TCP segmentation offload) hardware captures, such as spoofing the IP packet length
 # TRUE or FALSE (case-insensitive)
@@ -4647,7 +4653,7 @@ nameres.transport_name: TRUE
 
 # Whether to validate the TCP checksum or not.  (Invalid checksums will cause reassembly, if enabled, to fail.)
 # TRUE or FALSE (case-insensitive)
-#tcp.check_checksum: FALSE
+tcp.check_checksum: TRUE
 
 # Whether subdissector can request TCP streams to be reassembled
 # TRUE or FALSE (case-insensitive)
